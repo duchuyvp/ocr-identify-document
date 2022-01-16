@@ -117,7 +117,7 @@ def upload_image(request: Request, file: UploadFile = File(...)):
                         'aligned_images', file_name), image)
         my_string = base64.b64encode(img_object)
         my_string = my_string.decode('utf-8')
-        url = 'http://127.0.0.1:8080' + '/extract'
+        url = 'http://0.0.0.0:8080' + '/extract'
         # url = 'http://localhost:8080' + '/extract'
         request_body = {'base64_img': my_string, 'key': cfg['key_api']}
 

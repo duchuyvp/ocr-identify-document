@@ -1,8 +1,12 @@
 version: "2"
 services:
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      shm_size: '2gb'
+    shm_size: '2gb'
     ports:
       - "8080:8080"
     container_name: ocr
-    command: python server.py
+    # command: python server.py

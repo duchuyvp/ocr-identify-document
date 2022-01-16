@@ -2,24 +2,18 @@ FROM python:3.8.10
 
 LABEL MAINTAINER="ndh, lvt, bkd"
 
-# RUN apt-get update -y
+WORKDIR /usr/src/app
 
-# RUN apt-get -y install python3-pip ffmpeg libsm6 libxext6
+COPY . /usr/src/app
 
-# RUN apt-get clean
+RUN apt-get update -y
 
-# RUN mkdir /app
-
-WORKDIR /app
-
-COPY . /app
-
-# RUN python3 -m venv ./env
+RUN apt-get -y install python3-pip ffmpeg libsm6 libxext6
 
 RUN pip3 install --upgrade pip
 
-# RUN ./env/bin/pip3 install -r ./requirements.txt
-
-# CMD [ "./env/bin/python3","server.py" ]
-
 RUN pip3 install -r requirements.txt
+
+EXPOSE 8080
+
+CMD python server.py
