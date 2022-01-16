@@ -42,6 +42,3 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 python server.py
 ``` -->
 
-```
-
-```
