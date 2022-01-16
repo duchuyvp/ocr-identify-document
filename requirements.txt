@@ -15,4 +15,3 @@ uvloop==0.16.0
 vietocr==0.3.5
 Jinja2==2.10.1
 python-multipart==0.0.5
-ray

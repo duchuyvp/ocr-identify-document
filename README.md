@@ -23,7 +23,9 @@ and [Docker Compose](https://docs.docker.com/compose/install/)
 docker-compose up
 ```
 
-<!--### **Run project**
+3. Goto http://localhost:8080
+
+ <!--### **Run project**
 
 -   **Linux GNU & Drawin**
 
@@ -34,8 +36,12 @@ python3 server.py
 
 -   **Windows**
 
-```powershell
+````powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 ./env/Scripts/activate
 python server.py
 ``` -->
+
+```
+
+```
