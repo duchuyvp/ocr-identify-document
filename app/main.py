@@ -86,15 +86,15 @@ def extract(item: Item):
         return {'message': 'approved', 'description': 'image is id card', 'info': info}
 
 
-# @app.exception_handler(StarletteHTTPException)
-# async def exception_handler(request: Request, exc: StarletteHTTPException):
-#     return templates.TemplateResponse(os.path.join('404.html'), {'request': request})
+@app.exception_handler(StarletteHTTPException)
+async def exception_handler(request: Request, exc: StarletteHTTPException):
+    return templates.TemplateResponse(os.path.join('404.html'), {'request': request})
 
 
-# @app.get('/*')
-# async def exception_handler_2(request: Request):
-#     # raise StarletteHTTPException(status_code=404)
-#     return templates.TemplateResponse(os.path.join('404.html'), {'request': request})
+@app.get('/*')
+async def exception_handler_2(request: Request):
+    raise StarletteHTTPException(status_code=404)
+    return templates.TemplateResponse(os.path.join('404.html'), {'request': request})
 
 
 @app.get('/', response_class=HTMLResponse)
