@@ -12,6 +12,16 @@ Như tiêu đề, web chỉ có một nhiệm vụ duy nhất là trích xuất 
 
 Vì sao lại là Python 3.8.10 mà không phải version cao hơn? Vì project phụ thuộc vào nhiều thư viện có sẵn nên Python 3.8.10 là phù hợp nhất rồi
 
+### PyTorch
+
+### NumPy
+
+### VietOCR
+
+### OpenCV
+
+### Uvicorn
+
 ## How To Run
 
 <details><summary><b>Linux and Mac</b></summary>
