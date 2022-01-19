@@ -60,6 +60,8 @@ Vì sao lại là Python 3.8.10 mà không phải version cao hơn? Vì project 
 <details><summary><b>Docker</b></summary>
 
 Đối với người dùng Windows, thư viện `vietocr` yêu cầu `Visual C++ Redistributable 2015-2022` (không hiểu tại sao) nên để dễ dàng cho người dùng, chúng tôi khuyến nghị sử dụng `Docker` và `Docker Compose`. Việc này khiến người dùng không cần có sẵn `Python` trong máy.
+    
+Nếu người dùng đã dùng Windows rồi còn cố chấp không sử dụng Docker hay cài đặt một phiên bản Python cao (hoặc thấp) hơn, việc xảy ra một số lỗi vặt thì chúng tôi không biết, cũng đừng post bất cứ cái issue nào.
 
 1. Cài đặt [Docker](<(https://docs.docker.com/desktop/windows/install/)>) và [Docker Compose](<(https://docs.docker.com/compose/install/)>):
 
