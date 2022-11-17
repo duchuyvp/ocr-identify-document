@@ -122,6 +122,7 @@ def upload_image(request: Request, file: UploadFile = File(...)):
         request_body = {'base64_img': my_string, 'key': cfg['key_api']}
 
         response = requests.post(url=url, json=request_body)
+        print("response", response.json())
         response = response.json()
 
         if response['description'] != 'image is id card':

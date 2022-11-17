@@ -28,7 +28,7 @@ class Cropper:
         self.weight_path = weight_path
         self.net = cv2.dnn.readNetFromDarknet(self.config_path, self.weight_path)
         self.ln = self.net.getLayerNames()
-        self.ln = [self.ln[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
+        self.ln = [self.ln[i - 1] for i in self.net.getUnconnectedOutLayers()]
 
     @staticmethod
     def preprocess_img(img):

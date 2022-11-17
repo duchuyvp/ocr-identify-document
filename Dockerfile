@@ -1,10 +1,8 @@
-FROM python:3.8.10
+FROM python:3.10.6
 
-LABEL MAINTAINER="ndh, lvt, bkd"
+WORKDIR /app
 
-WORKDIR /usr/src/app
-
-COPY . /usr/src/app
+COPY . /app
 
 RUN apt-get update -y
 
