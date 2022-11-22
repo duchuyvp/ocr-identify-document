@@ -8,9 +8,11 @@ try:
 except ImportError:
     import importlib_resources as resources
 
+cache_root = os.path.join(os.path.expanduser("~"), ".cache/gdown")
 
 def download_weights(url, cache=None, md5=None, quiet=False):
-
+    if os.path.exists(os.path.join(cache_root, cache)):
+        return os.path.join(cache_root, cache)
     return os.path.join(gdown.cached_download(url, path=cache, md5=md5, quiet=quiet))
 
 

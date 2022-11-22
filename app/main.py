@@ -107,14 +107,13 @@ def upload_image(request: Request, file: UploadFile = File(...)):
     if file.content_type in ['image/jpeg', 'image/jpg', 'image/png']:
 
         img_object = file.file.read()
-        image = cv2.imdecode(np.fromstring(
-            img_object, np.uint8), cv2.IMREAD_COLOR)
+        # image = cv2.imdecode(np.fromstring(
+        #     img_object, np.uint8), cv2.IMREAD_COLOR)
 
-        file_name = str(time.time()) + file.filename
-        print(cfg['save_image'])
-        if cfg['save_image']:
-            cv2.imwrite(os.path.join(dir_path, 'static',
-                        'aligned_images', file_name), image)
+        # file_name = str(time.time()) + file.filename
+        # if cfg['save_image']:
+        #     cv2.imwrite(os.path.join(dir_path, 'static',
+        #                 'aligned_images', file_name), image)
         my_string = base64.b64encode(img_object)
         my_string = my_string.decode('utf-8')
         url = 'http://0.0.0.0:8080' + '/extract'
